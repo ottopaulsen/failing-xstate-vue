@@ -2,7 +2,7 @@
   <h1>The Page</h1>
   <p>Parent state: {{state.value}}</p>
   <p>Child state from actor: {{childActor?.state?.value}}</p>
-  <p>Child state from children: {{state.children.child._state.value}}</p>
+  <p v-if="state.children.child">Child state from children: {{state.children.child._state.value}}</p>
   <button @click="clicked">DO IT</button>
 </template>
 
